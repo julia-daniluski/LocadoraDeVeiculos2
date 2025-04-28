@@ -31,4 +31,4 @@ O sistema utiliza:
 - **Models**: Chama as classes 'veiculo' (abstrata), 'carro' e 'moto' para os veiculos, com calculo de aluguel baseado em diárias contantes ('DIARIA_CARRO' e 'DIARIA_MOTO');
 - **Services**: Classes 'AUTH' (autenticação e gerenciamento de usuários) e 'Locadora' (gerenciamento dos veículos);
 - **Views**: Template p´rincipal 'template.php' para renderizar a interface e 'login.php' para a auntetificação;
-- **Controllers**: lógica em 'index.php'
+- **Controllers**: lógica em 'index.php' para processar requisições e carregar o template.

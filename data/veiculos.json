@@ -1,0 +1,21 @@
+[
+    {
+        "tipo": "Carro",
+        "modelo": "Ferrari",
+        "placa": "AAA1A11",
+        "disponivel": false
+    },
+    {
+        "tipo": "moto",
+        "modelo": "Honda",
+        "placa": "BBB2B22",
+        "disponivel": false
+    },
+
+    {
+        "tipo": "Helicóptero",
+        "modelo": "Robinson R44",
+        "placa": "PT-ZEN",
+        "disponivel": false
+    }
+]
