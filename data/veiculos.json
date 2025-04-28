@@ -3,7 +3,7 @@
         "tipo": "Carro",
         "modelo": "Ferrari",
         "placa": "AAA1A11",
-        "disponivel": false
+        "disponivel": true
     },
     {
         "tipo": "moto",
