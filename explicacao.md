@@ -13,5 +13,5 @@ O sistema de locadora de veículos é uma aplicação web que permite:
 
 Os dados são armazenados em dois arquivos JSON: 
 
-    - `usuarios.json`: username, senha criptografada e perfil;
-    - ``
+    - `usuarios.json`: username, senha criptografada e perfil.
+    - `veiculos.json`: tipo, modelo, placa e status.
