@@ -6,12 +6,12 @@ Este documento descreve o funcionamento do sistema de locadora de veículos dese
 
 O sistema de locadora de veículos é uma aplicação web que permite:
 
-    - Autenticação de usuário com dois perfis: **adm** (administrador) e **usuário**;
-    - Gerenciamento de veículos: cadastro, aluguel, devolução e exclusão;
-    - Calculo de previsão de aluguel: com base no tipo de veículo (carro, moto ou helicoptero) e número de dias;
-    - Interface responsiva.
+- Autenticação de usuário com dois perfis: **adm** (administrador) e **usuário**;
+- Gerenciamento de veículos: cadastro, aluguel, devolução e exclusão;
+- Calculo de previsão de aluguel: com base no tipo de veículo (carro, moto ou helicoptero) e número de dias;
+- Interface responsiva.
 
 Os dados são armazenados em dois arquivos JSON: 
 
-    - `usuarios.json`: username, senha criptografada e perfil.
-    - `veiculos.json`: tipo, modelo, placa e status.
+- `usuarios.json`: username, senha criptografada e perfil.
+- `veiculos.json`: tipo, modelo, placa e status.
