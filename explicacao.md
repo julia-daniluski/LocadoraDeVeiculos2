@@ -16,7 +16,7 @@ Os dados são armazenados em dois arquivos JSON:
 - `usuarios.json`: username, senha criptografada e perfil.
 - `veiculos.json`: tipo, modelo, placa e status.
 
-## 2: estruturs do sistema
+## 2: estrutura do sistema
 
 O sistema utiliza:
 - **PHP**: para a lógica;
@@ -24,3 +24,11 @@ O sistema utiliza:
 - **Bootstrap Icons**: para os icones da interface;
 - **Composer**: para autoloading de classes;
 - **JSON**: para a persistência de dados.
+
+### 2.1: componentes principais
+
+- **Interfaces**: Define a interface 'locavel' para veículos e utiliza os métodos 'alugar()', 'dvolver()' e 'isDisponivel()';
+- **Models**: Chama as classes 'veiculo' (abstrata), 'carro' e 'moto' para os veiculos, com calculo de aluguel baseado em diárias contantes ('DIARIA_CARRO' e 'DIARIA_MOTO');
+- **Services**: Classes 'AUTH' (autenticação e gerenciamento de usuários) e 'Locadora' (gerenciamento dos veículos);
+- **Views**: Template p´rincipal 'template.php' para renderizar a interface e 'login.php' para a auntetificação;
+- **Controllers**: lógica em 'index.php'
