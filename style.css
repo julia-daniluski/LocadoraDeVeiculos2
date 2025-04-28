@@ -1,0 +1,76 @@
+.action-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: flex-start;
+}
+
+.btn-group-actions{
+    display:flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.rent-group{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    order: 2;
+}
+.delete-btn{
+    order: 1;
+}
+
+.days-input{
+    width: 60px !important;
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+}
+
+#quadroDetalhes-1,
+#quadroDetalhes-2,
+#quadroDetalhes-3,
+#quadroDetalhes-4,
+#quadroDetalhes-5,
+#quadroDetalhes-6 {
+    display: none; /* O quadro começa escondido */
+  }
+  
+  /* Classe que será adicionada para mostrar o quadro */
+  #quadroDetalhes.mostrar {
+    display: block;
+  }
+  
+  .escondido {
+    display: none;
+  }
+  
+
+
+@media (max-width: 768px){
+    .action-wrapper{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-group-actions{
+        flex-direction: column;
+    }
+
+    .rent-group{
+        order: 1;
+        width: 100%;
+    }
+    .delete-btn{
+        order: 2;
+        width: 100%;
+    }
+    .days-input{
+        width: 100% !important;
+    }
+
+    .escondido {
+        display: none;
+      }
+}
+
