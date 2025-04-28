@@ -15,3 +15,12 @@ Os dados são armazenados em dois arquivos JSON:
 
 - `usuarios.json`: username, senha criptografada e perfil.
 - `veiculos.json`: tipo, modelo, placa e status.
+
+## 2: estruturs do sistema
+
+O sistema utiliza:
+- **PHP**: para a lógica;
+- **Bootstrap**: para a estilização;
+- **Bootstrap Icons**: para os icones da interface;
+- **Composer**: para autoloading de classes;
+- **JSON**: para a persistência de dados.
