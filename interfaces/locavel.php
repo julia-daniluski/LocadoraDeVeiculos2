@@ -1,6 +1,6 @@
 <?php
 
-namespace Interfaces;
+namespace interfaces;
 
 // interface que defineos metodos necessario para o veiculo ser locável
 interface Locavel{
