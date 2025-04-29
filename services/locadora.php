@@ -1,6 +1,6 @@
 <?php
 namespace Services;
-use models\{Veiculos, Carro, Moto, Helicoptero};
+use models\{Veiculos, Carro, Moto, Helicoptero, Veiculo};
 
 // classe para gerenciar a locação
 class Locadora{
@@ -42,7 +42,7 @@ class Locadora{
             }
         }
     // salvar veiculos
-    
+
     private function salvarVeiculos(): void {
         $dados = [];
     
@@ -63,6 +63,20 @@ class Locadora{
 
             file_put_contents(ARQUIVO_JSON, json_encode($dados, JSON_PRETTY_PRINT));
         }
+
+        //adicionar novo veiculo
+        public function adicionarVeiculo(Veiculo $veiculo): void{
+            $this->veiculos[] = $veiculo;
+            $this->salvarVeiculos();
+        }
+
+        //Remover Veiculo
+        public function removerVeiculo(Veiculo $veiculo): void{
+        $this->veiculos[] = $veiculo;
+        $this->salvarVeiculos();
+        }
+
+        // Alugar veiculo por x dias
     }
     
     }
