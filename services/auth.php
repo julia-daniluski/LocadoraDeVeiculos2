@@ -47,9 +47,22 @@ class Auth{
     public function login (string $username, string $password):bool{
         foreach ($this ->usuarios as $usuario){
             if ($usuario ['username'] === $username &&password_verify($password, $usuario['password'])){
-                
+                $_SESSION ['auth'] = [
+                    'logado' => true,
+                    'username' => $username,
+                    'perfil' => $usuario['perfil']
+                ];
+                return true; //login realizado
             }
         }
+        return false; //login não realizado
+    }
+    public function logout() :void{
+        session_destroy();
+    }
+    // verificar se o usuario está logado
+    public static function verificarLogin():bool{
+        return isset($_SESSION['auth'] && $_SESSION ['auth'] ['perfil'] === perfil);
     }
 }
 ?>
