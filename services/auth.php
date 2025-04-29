@@ -28,7 +28,19 @@ class Auth{
                 'password' => password_hash('usuario123', PASSWORD_DEFAULT),
                 'perfil' => 'usuario']
             ];
+            $this ->salvarUsuarios();
         }
+    }
+
+    // função para salvar usuarios no arquivo json
+    private function salvarUsuarios(): void {
+        $dir = dirname (ARQUIVO_USUARIOS);
+
+        if(!is_dir($dir)){
+            mkdir($dir, 0777, true);
+        }
+
+        file_put_contents(ARQUIVO_USUARIOS, json_encode($this->usuarios, JSON_PRETTY_PRINT));
     }
 }
 ?>
