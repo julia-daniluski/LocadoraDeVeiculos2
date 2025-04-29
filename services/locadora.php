@@ -59,6 +59,8 @@ class Locadora{
             if (!is_dir($dir)){
                 mkdir($dir, 0777, true);
             }
+
+            file_put_contents(ARQUIVO_JSON, json_encode($dados, JSON_PRETTY_PRINT));
         }
     }
     
