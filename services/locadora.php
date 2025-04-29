@@ -42,6 +42,7 @@ class Locadora{
             }
         }
     // salvar veiculos
+    
     private function salvarVeiculos(): void {
         $dados = [];
     
