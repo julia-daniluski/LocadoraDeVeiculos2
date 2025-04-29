@@ -3,7 +3,7 @@
     use interfaces\Locavel;
 
     // classe que representa um carro
-    class Carro extends Veiculo implements locavel {
+    class Helicoptero extends Veiculo implements locavel {
         public function calcularAluguel(int $dias):float {
             return $dias * DIARIA_HELICOPTERO;
         }
