@@ -42,9 +42,26 @@ class Locadora{
             }
         }
     // salvar veiculos
-    private function salvarVeiculos(): void{
-        
+    private function salvarVeiculos(): void {
+        $dados = [];
+    
+        foreach ($this->veiculos as $veiculo) {
+            $dados[] = [
+                'tipo' => ($veiculo instanceof Carro) ? 'Carro' :
+                          (($veiculo instanceof Moto) ? 'Moto' : 'Helicoptero'),
+                'modelo' => $veiculo->getModelo(),
+                'placa' => $veiculo->getPlaca(),
+                'disponivel' => $veiculo->isDisponivel()
+            ];
+
+            $dir = dirname(ARQUIVO_JSON);
+
+            if (!is_dir($dir)){
+                mkdir($dir, 0777, true);
+            }
+        }
     }
+    
     }
 
 
