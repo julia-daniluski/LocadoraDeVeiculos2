@@ -120,11 +120,80 @@
             </div>
         </div>
 
-        <?= if($mensagem)?>
+        <?php if($mensagem)?>
         <div class="alert alert-info alert-dismissible fade show" role="alert">
         <?= htmlspecialchars($mensagem) ?>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label=""close></button>
         </div>
-        <?= endif; ?>
+        <?php endif; ?>
+
+
+        <!-- Formulário para adicionar novos veiculos -->
+        <div class="row same-height-row">
+            <?php if (Auth::isAdmin()):?>
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h4>Adicionar novo veículo</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="post" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="modelo" class="form-label">Modelo:</label>
+                                <input type="text" class="form-control" name="modelo" required>
+                                <div class="invalid-feedback">
+                                    Informe um modelo válido"
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="placa" class="form-label">Placa:</label>
+                                <input type="text" class="form-control" name="placa" required>
+                                <div class="invalid-feedback">
+                                    Informe uma placa válida
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="tipo" class="form-label">Tipo:</label>
+                                <select name="tipo" class="form-select" id="tipo" required>
+                                    <option value="">Carro</option>
+                                    <option value="">Moto</option>
+                                    <option value="">Helicoptero</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary w-100" type="submit" name="adicionar">Adicionar veículo</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
+
+            <!-- Formulário para calculo de aluguel -->
+            <div class="col-<?php Auth::isAdmin()'md-6':'12'?>">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h4 class="mb-0">
+                            Calcular a previsão de aluguel
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="post" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="" class="input-label">Tipo de veículo:</label>
+                                <select class="form-select" name="" id="" required>
+                                    <option value="carro">Carro</option>
+                                    <option value="moto">Moto</option>
+                                    <option value="helicoptero">Helicoptero</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="quantidade" class="form-label">Quantidade de dias</label>
+                                <input type="number" name="quantidade" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100" name="calcular">Calcular</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 </body>
