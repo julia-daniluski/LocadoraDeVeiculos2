@@ -2,20 +2,25 @@
     {
         "tipo": "Carro",
         "modelo": "Ferrari",
-        "placa": "AAA1A11",
+        "placa": "ABC1D23",
+        "disponivel": false
+    },
+    {
+        "tipo": "Moto",
+        "modelo": "Harley Davidson",
+        "placa": "EFG4H56",
         "disponivel": true
     },
     {
-        "tipo": "moto",
-        "modelo": "Honda",
-        "placa": "BBB2B22",
-        "disponivel": false
+        "tipo": "Carro",
+        "modelo": "Celta",
+        "placa": "IJK7L89",
+        "disponivel": true
     },
-
     {
-        "tipo": "Helicóptero",
-        "modelo": "Robinson R44",
-        "placa": "PT-ZEN",
+        "tipo": "Moto",
+        "modelo": "Royal enfilds",
+        "placa": "MNO1P32",
         "disponivel": false
     }
 ]
