@@ -60,7 +60,8 @@ class Locadora {
 
     // remover veiculo
     public function removerVeiculo(string $modelo, string $placa): string {
-       foreach($this->veiculos as $key => $veiculo){
+       // percorrer a lista de veiculos
+        foreach($this->veiculos as $key => $veiculo){
             // verifica se modelo e placa correspondem um ao outro
             if($veiculo->getModelo() === $modelo && $veiculo->getPlaca() === $placa){
                 // remove o veiculo do array
@@ -80,9 +81,42 @@ class Locadora {
 
             }
 
-    // funçao alugar veiculo por x dias
+    // alugar veiculo por x dias
+    public function alugarVeiculo(string $modelo, int $dias = 1): string{
+        // percorrer a lista de veiculos
+        foreach($this->veiculos as $veiculo){
+            if($veiculo->getModelo() === $modelo && $veiculo->isDisponivel()){
+                
+                //calcular valor do aluguel
+                $valorAluguel = $veiculo->calcularAluguel($dias);
 
-    // funçao devolver veiculo
+                // marcar como indisponivel/alugado
+                $mensagem = $veiculo->alugar();
+
+                //salvar novo estado do veiculo
+                $this->salvarVeiculos();
+
+                return $mensagem . "Valor do aluguel: R$ " . number_format($valorAluguel, 2, ',', '.');
+            }
+        }
+        return "Veículo indisponivel para aluguel no momento.";
+    }
+
+    // Devolver veiculo
+    public function devolverVeiculo(string $modelo) :string{
+
+        // percorrer a lista
+        foreach ($this->veiculos  as $veiculo){
+
+            if($veiculo->getModelo() === $modelo && !$veiculo->isDisponivel()){
+
+                //disponibilizar o veiculo
+                $mensagem = $veiculo->devolver();
+                
+            }
+        }
+    }
+
 
     // funçao retornar a lista de veiculos
 
