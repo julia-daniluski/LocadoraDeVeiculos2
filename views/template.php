@@ -122,8 +122,9 @@
 
         <?= if($mensagem)?>
         <div class="alert alert-info alert-dismissible fade show" role="alert">
-
+        <?= htmlspecialchars($mensagem) ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label=""close></button>
         </div>
-
+        <?= endif; ?>
 
 </body>
