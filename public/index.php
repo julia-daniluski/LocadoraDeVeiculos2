@@ -48,6 +48,8 @@ $usuario = Auth::getUsuarios();
             $modelo = $_POST['modelo'];
             $placa = $_POST['placa'];
             $tipo = $_POST['tipo'];
+
+            $veiculo = ($tipo == 'Carro') ? new Carro($modelo, $placa) : new Moto ($modelo, $placa);
         }
 
     }
