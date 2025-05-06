@@ -55,6 +55,23 @@ $usuario = Auth::getUsuarios();
             $mensagem = "Veiculo adicionado com sucesso";
         }
 
+        elseif(isset($_POST['alugar'])){
+          $dias = isset($_POST['dias']) ? (int)$_POST['dias'] : 1; 
+          $mensagem = $locadora->alugarVeiculo($_POST['modelo'], $dias); 
+        }
+        elseif(isset($_POST['devolver'])){
+           $mensagem = $locadora->devolverVeiculo($_POST['modelo']); 
+        }
+        elseif(isset($_POST['deletar'])){
+            $mensagem = $locadora->revomerVeiculo($_POST['placa']); 
+        }
+        elseif(isset($_POST['calcular'])){
+            $dias = (int)$_POST['dias_calculo'] : 1; 
+            $tipo = $_POST['dias_calculo'];
+            $valor = $locadora->calcularPrevisaoAluguel($dias, $tipo);
+            $mensagem = "Previsão de valor para {$dias} dias: R$" . number_format($valor, 2,',', '.'); 
+        }
+
     }
 
     renderizar:
