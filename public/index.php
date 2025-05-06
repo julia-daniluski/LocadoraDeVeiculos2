@@ -50,6 +50,9 @@ $usuario = Auth::getUsuarios();
             $tipo = $_POST['tipo'];
 
             $veiculo = ($tipo == 'Carro') ? new Carro($modelo, $placa) : new Moto ($modelo, $placa);
+            $locadora->adicionarVeiculo($veiculo);
+
+            $mensagem = "Veiculo adicionado com sucesso";
         }
 
     }
