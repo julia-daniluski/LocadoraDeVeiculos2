@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'locadora/veiculos',
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
-        'reference' => '377653ccafccba75944755c82477674958cba8f8',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'reference' => null,
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'locadora/veiculos' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => '377653ccafccba75944755c82477674958cba8f8',
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'reference' => null,
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
