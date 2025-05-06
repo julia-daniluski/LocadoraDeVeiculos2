@@ -44,7 +44,11 @@ $usuario = Auth::getUsuarios();
 
             }
         }
-
+        if(isset($_POST['adicionar'])){
+            $modelo = $_POST['modelo'];
+            $placa = $_POST['placa'];
+            $tipo = $_POST['tipo'];
+        }
 
     }
 
